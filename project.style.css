@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+#navbar {
+	margin-left: 30%;
+}
+a {
+	text-decoration: none;
+}
+
+ul li {
+	font-size: 2em;
+	font-family: "Fredoka One", "sans-serif";
+	background-color: PaleGreen;
+	display: inline;
+	text-align: center;
+}
+
+ul li:hover {
+	background-color: gray;
+}
+
+div#days {
+	margin: auto;
+	max-width: 400px;
+	text-align: center;
+	position: relative;
+}
+
+div#days a {
+	margin: auto;
+}
+
+#date {
+	font-family: "Fredoka One", "sans-serif";
+	font-size: 1.5em;
+	color: PaleGreen;
+	margin: auto;
+	margin-bottom: : 10px;
+	display: inline-block;
+}
+
+#tomorrow {
+	margin-left: 15px;
+}
