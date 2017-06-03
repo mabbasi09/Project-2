@@ -33,12 +33,12 @@ div#days a {
 #date {
 	font-family: "Fredoka One", "sans-serif";
 	font-size: 1.5em;
-	color: PaleGreen;
+	color: Red;
 	margin: auto;
 	margin-bottom: : 10px;
 	display: inline-block;
 }
 
 #tomorrow {
-	margin-left: 15px;
+	margin-left: 20px;
 }
