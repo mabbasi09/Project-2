@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
 #navbar {
-	margin-left: 0%;
 }
 a {
 	text-decoration: none;
@@ -10,7 +9,7 @@ a {
 ul li {
 	font-size: 2em;
 	font-family: "Fredoka One", "sans-serif";
-	background-color: PaleGreen;
+	background-color: Red;
 	display: inline;
 	text-align: center;
 }
