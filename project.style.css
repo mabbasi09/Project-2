@@ -10,7 +10,7 @@ ul li {
 	font-size: 2em;
 	font-family: "Fredoka One", "sans-serif";
 	background-color: gray;
-	display: inline;
+	display: inline-block;
 	text-align: center;
 }
 
