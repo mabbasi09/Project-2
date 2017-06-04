@@ -10,13 +10,13 @@ a {
 ul li {
 	font-size: 2em;
 	font-family: "Fredoka One", "sans-serif";
-	background-color: Gray;
+	background-color: gray;
 	display: inline;
 	text-align: center;
 }
 
 ul li:hover {
-	background-color: Red;
+	background-color: red;
 }
 
 div#days {
@@ -33,7 +33,7 @@ div#days a {
 #date {
 	font-family: "Fredoka One", "sans-serif";
 	font-size: 1.5em;
-	color: Red;
+	color: red;
 	margin: auto;
 	margin-bottom: : 10px;
 	display: inline-block;
