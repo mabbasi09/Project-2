@@ -10,13 +10,13 @@ a {
 ul li {
 	font-size: 2em;
 	font-family: "Fredoka One", "sans-serif";
-	background-color: Red;
+	background-color: Gray;
 	display: inline;
 	text-align: center;
 }
 
 ul li:hover {
-	background-color: gray;
+	background-color: Red;
 }
 
 div#days {
