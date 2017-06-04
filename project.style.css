@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
-#navbar {
-	margin left: 30%;
-a {
-	text-decoration: none;
-}
-
-ul li {
-	font-size: 2em;
-	font-family: "Fredoka One", "sans-serif";
+div#navbar ul li {
 	background-color: gray;
-	display: inline-block;
 	text-align: center;
+	display: inline;
+	width: 100%;
 }
 
-ul li:hover {
+li.changeBackground:hover {
 	background-color: red;
+}
+
+li.changeBackground:active {
+	background-color: darkRed;
 }
 
 div#days {
