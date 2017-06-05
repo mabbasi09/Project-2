@@ -15,16 +15,36 @@ $(document).ready(function(){
 		//load tomorrow info
 	};
 });
+
+function showpage(page) {
+	$("#page1").hide();
+	$("#page2").hide();
+	$("#page3").hide();
+	$("#page4").hide();
+	if (page === 1) {
+		$("#page1").show();
+	}
+	else if (page === 2) {
+		$("#page2").show();
+	}
+	else if (page === 3) {
+		$("#page3").show();
+	}
+	else if (page === 4) {
+		$("#page4").show();
+	}
+}
+	
 </script>
 
 <body>
 	
 	<div id="navbar">
 		<ul id="nav">
-			<li><a href="" id="about">ABOUT</a></li>
-			<li><a href="" id="pantry">PANTRY</a></li>
-			<li><a href="" id="progress">PROGRESS</a></li>
-			<li><a href="" id="recipies">RECIPIES</a></li>
+			<li><a href="javascript:void(0)" onclick="showpage(1)" id="about">ABOUT</a></li>
+			<li><a href="javascript:void(0)" onclick="showpage(2)" id="pantry">PANTRY</a></li>
+			<li><a href="javascript:void(0)" onclick="showpage(3)" id="progress">PROGRESS</a></li>
+			<li><a href="javascript:void(0)" onclick="showpage(4)" id="recipies">RECIPIES</a></li>
 		</ul>
 	</div>
 	
