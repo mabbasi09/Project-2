@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>PantryMate API</title>
+	<style>
+	  	table, th, td {
+		    border: 1px solid black;
+		    border-collapse: collapse;
+		    padding: 3px;
+	  	}
+  	</style>
+</head>
+<body>
+<h1>PantryMate API</h1>
+<table>
+	<tr>
+		<th>Function Name</th>
+		<th>Parameters</th>
+		<th>Return Value</th>
+		<th>Description</th>
+	</tr>
+	<tr><td>addNutr(nutr, unit, amount)</td>
+		<td>nutr: Nutrient to add [string]<br>unit: Unit of measurement [string]<br>
+		amount: Amount in g, mg etc. [int]</td>
+		<td>None</td>
+		<td>User may select a nutrient and amount to add to their daily progress</td>
+	</tr>
+	<tr><td>removeNutr(nutr, unit, amount)</td>
+		<td>nutr: Nutrient to remove [string]<br>unit: Unit of measurement [string]<br>
+		amount: Amoung in g, mg, etc. [int]</td>
+		<td>Boolean</td>
+		<td>User selected nutrient to remove from progress</td>
+	</tr>
+	<tr><td>setGoal(nutr, amount)</td>
+		<td>nutr: Nutrient to remove [string]<br>amount: Amoung in g, mg, etc. [int]</td>
+		<td>None</td>
+		<td>User may set a goal for each nutrient to be checked against progress</td>
+	</tr>
+	<tr><td>setWeight(weight)</td>
+		<td>weight [int]</td>
+		<td>None</td>
+		<td>Will update the current weight of user to tracked over time</td>
+	</tr>
+</table>
+</body>
+</html>

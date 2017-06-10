@@ -1,5 +1,24 @@
 <html>
 	<head>
+		<script language="JavaScript" type="text/javascript" src="JQ.js"></script>
+		<script language="JavaScript" type="text/javascript" src="progress.model.js"></script>
+		<script>
+			$(function(){
+				$("#addItem").submit(function(){
+					var nutr = $("input#addNutr").val();
+					var unit = $("input#addUnit").val();
+					var amount = $("input#addAmount").val();
+					progressModel.addNutr(nutr, unit, amount);
+				});
+
+				$("#removeItem").submit(function(){
+					var nutr = $("input#removeNutr").val();
+					var unit = $("input#removeUnit").val();
+					var amount = $("input#removeAmount").val();
+					progressModel.removeNutr(nutr, unit, amount);
+				});
+			});
+		</script>
 		<title>My Progress</title>
 		<link rel="stylesheet" href="progressStyling.css">
 	</head>
@@ -11,13 +30,27 @@
 		Protein
 		<div class="bar">
 		</div>
+		Calories
+		<div class="bar">
+		</div>
 		Sugar
 		<div class="bar">
 		</div>
-		Cholestorol
-		<div class="bar">
-		</div>
-		Fats
+		Cholestoral
+	</div>
+	<div>
+		<form action="#" id="addItem">
+			<input type="text" id="addNutr" placeholder="Protein, Calories etc."><br>
+			<input type="text" id="addUnit" placeholder="Grams, mg etc."><br>
+			<input type="text" id="addAmount" placeholder="7g, 100mg etc."><br>
+			<button id="addBtn" type="submit" value="submit">Add Nutrient</button>
+		</form>
+		<form action="#" id="removeItem">
+			<input type="text" id="removeNutr" placeholder="Fats, Carbs etc."><br>
+			<input type="text" id="removeUnit" placeholder="Grams, mg etc."><br>
+			<input type="text" id="removeAmount" placeholder="5g, 80mg etc"><br>
+			<button id="removeBtn" type="submit" value="submit">Remove Nutrient</button>
+		</form>
 	</div>
 	</body>
 </html>

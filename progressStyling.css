@@ -5,8 +5,6 @@ h1 {
 
 .container{
 	display: inline-block;
-	position: fixed;
-	margin: auto;
 	width: auto;
 	border: 3px solid black;
 
@@ -18,4 +16,8 @@ h1 {
 	height: 200px;
 	width: 40px;
 	margin: 20px;
+}
+
+#addItem, #removeItem {
+	display: inline-block;
 }
