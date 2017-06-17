@@ -35,6 +35,12 @@ function showpage(page) {
 	}
 }
 	
+	// When the user clicks on <div>, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+
 </script>
 
 <body>	
@@ -59,8 +65,11 @@ function showpage(page) {
 			<br>
 			<br>
 			
+			<div class="popup" onclick="myFunction()">
 			<a href="#" class="tooltip">
     <img src="recipes/stuffedpeppers.jpg" alt="Buffalo Chicken Stuffed Peppers" height="275" width="275" border="2">
+			<span class="popuptext" id="myPopup">Test</span>
+			</div>
     <span>
         <strong>Buffalo Chicken Stuffed Peppers</strong>
     </span>
