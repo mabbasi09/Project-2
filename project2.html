@@ -1,180 +1,347 @@
 <!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" href="project.style.css">
+<link rel="stylesheet" href="project.style.css">
 </head>
 <title>PantryMate</title>
 <script type="text/javascript" src="JQ.js"></script>
 <script>
-$(document).ready(function(){
-	//date buttons
-	$("#yesterday").on("click", function(){
-        //load yesterday info
-    });
-	$("#tomorrow").on("click", function(){
-		//load tomorrow info
+	$(document).ready(function() {
+		//date buttons
+		$("#yesterday").on("click", function() {
+			//load yesterday info
+		});
+		$("#tomorrow").on("click", function() {
+			//load tomorrow info
+		});
 	});
-});
 
-function showpage(page) {
-	$("#page1").hide();
-	$("#page2").hide();
-	$("#page3").hide();
-	$("#page4").hide();
-	if (page === 1) {
-		$("#page1").show();
+	function showpage(page) {
+		$("#page1").hide();
+		$("#page2").hide();
+		$("#page3").hide();
+		$("#page4").hide();
+		if (page === 1) {
+			$("#page1").show();
+		} else if (page === 2) {
+			$("#page2").show();
+		} else if (page === 3) {
+			$("#page3").show();
+		} else if (page === 4) {
+			$("#page4").show();
+		}
 	}
-	else if (page === 2) {
-		$("#page2").show();
-	}
-	else if (page === 3) {
-		$("#page3").show();
-	}
-	else if (page === 4) {
-		$("#page4").show();
-	}
-}
-	
+
 	// When the user clicks on <div>, open the popup
-function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-}
-
+	function myFunction() {
+		var popup = document.getElementById("myPopup");
+		popup.classList.toggle("show");
+	}
 </script>
 
-<body>	
+<body>
 	<div id="navbar">
 		<ul id="nav">
-			<li><a href="javascript:void(0)" onclick="showpage(1)" id="pantry">PANTRY</a></li>
-			<li><a href="javascript:void(0)" onclick="showpage(2)" id="progress">PROGRESS</a></li>
-			<li><a href="javascript:void(0)" onclick="showpage(3)" id="recipies">RECIPIES</a></li>
-			<li><a href="javascript:void(0)" onclick="showpage(4)" id="about">ABOUT</a></li>
+			<li><a href="javascript:void(0)" onclick="showpage(1)"
+				id="pantry">PANTRY</a></li>
+			<li><a href="javascript:void(0)" onclick="showpage(2)"
+				id="progress">PROGRESS</a></li>
+			<li><a href="javascript:void(0)" onclick="showpage(3)"
+				id="recipies">RECIPIES</a></li>
+			<li><a href="javascript:void(0)" onclick="showpage(4)"
+				id="about">ABOUT</a></li>
 		</ul>
 	</div>
-	
-	<center>	
-	<img src="logo/PantryMate.jpg">
+
+	<center>
+		<img src="logo/PantryMate.jpg">
 	</center>
-	
-	<div id="page3" style="display:none;">
-			
-		<center>
-			
-			<br>
-			<br>
-			<br>
-			
-			<a href="buffalochickenpeppers.html" class="tooltip">
-    <img src="recipes/stuffedpeppers.jpg" alt="Buffalo Chicken Stuffed Peppers" height="275" width="275" border="2">
-    <span>
-        <strong>Buffalo Chicken Stuffed Peppers</strong>
-    </span>
-</a>
-			
-			<a href="#" class="tooltip">
-    <img src="recipes/tacopeppers.jpg" alt="Taco Stuffed Peppers" height="275" width="275" border="2">
-    <span>
-        <strong>Taco Stuffed Peppers</strong>
-    </span>
-</a>
-			
-			<a href="#" class="tooltip">
-    <img src="recipes/cheesesteakpeppers.jpg" alt="Cheesesteak Stuffed Peppers" height="275" width="275" border="2">
-    <span>
-        <strong>Cheesesteak Stuffed Peppers</strong>
-    </span>
-</a>
-			<br>
-			
-			<a href="#" class="tooltip">
-    <img src="recipes/chickenalfredo.jpg" alt="Chicken Zucchini Alfredo" height="275" width="275" border="2">
-    <span>
-        <strong>Chicken Zucchini Alfredo</strong>
-    </span>
-</a>
-			
-			<a href="#" class="tooltip">
-    <img src="recipes/bbqchickenpizza.jpg" alt="Buffalo Chicken Crust Pizza" height="275" width="275" border="2">
-    <span>
-        <strong>Buffalo Chicken Crust Pizza</strong>
-    </span>
-</a>
-			
-			<a href="#" class="tooltip">
-    <img src="recipes/cauliflower.jpg" alt="General Tso Cauliflower" height="275" width="275" border="2">
-    <span>
-        <strong>General Tso Cauliflower</strong>
-    </span>
-</a>
-			<br>
-			
-			<a href="#" class="tooltip">
-    <img src="recipes/ravioli.jpg" alt="Zucchini Ravioli" height="275" width="275" border="2">
-    <span>
-        <strong>Zucchini Ravioli</strong>
-    </span>
-</a>
-			
-			<a href="#" class="tooltip">
-    <img src="recipes/enchaladas.jpg" alt="Zucchini Enchaladas" height="275" width="275" border="2">
-    <span>
-        <strong>Zucchini Enchaladas</strong>
-    </span>
-</a>
-			
-			<a href="#" class="tooltip">
-    <img src="recipes/garlicparmasan.jpg" alt="Garlic Parmasan Salmon" height="275" width="275" border="2">
-    <span>
-        <strong>Garlic Parmasan Salmon</strong>
-    </span>
-</a>
+
+	<div id="page1" style="display: none;">
+	<center>
+		<table style="border: none;">
+			<form>
+				<tr>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Basics</strong><br></td>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Baking</strong></td>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Sweetener</strong></td>
+				</tr>
+				<tr>
+					<td style="text-align: left; width:250px; vertical-align: top; border: none;"><input type="checkbox"
+						name="Basics" value="Kosher Salt">Kosher Salt<br> <input
+						type="checkbox" name="Basics" value="Fine salt">Fine salt<br>
+						<input type="checkbox" name="Basics" value="Black peppercorns">Black
+						peppercorns<br> <input type="checkbox" name="Basics"
+						value="Extra virgin olive oil">Extra virgin olive oil<br>
+						<input type="checkbox" name="Basics" value="Vegetable oil">Vegetable
+						oil<br> <input type="checkbox" name="Basics"
+						value="Apple cider vinegar">Apple cider vinegar<br> <input
+						type="checkbox" name="Basics" value="Red wine vinegar">Red
+						wine vinegar<br> <input type="checkbox" name="Basics"
+						value="Balsamic or sherry vinegar">Balsamic or sherry
+						vinegar<br> <input type="checkbox" name="Basics"
+						value="Rice vinegar (unseasoned)">Rice vinegar
+						(unseasoned)<br></td>
+					<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+						<input type="checkbox" name="Baking" value="Flour">Flour<br>
+						<input type="checkbox" name="Baking" value="Baking soda">Baking soda<br>
+						<input type="checkbox" name="Baking" value="Baking powder">Baking powder<br>
+						<input type="checkbox" name="Baking" value="Cream of tartar">Cream of tartar<br>
+						<input type="checkbox" name="Baking" value="Cocoa powder (unsweetened)">Cocoa powder (unsweetened)<br>
+						<input type="checkbox" name="Baking" value="Chocolate: chips or bar">Chocolate: chips or bar<br>
+						<input type="checkbox" name="Baking" value="Evaporated milk">Evaporated milk<br>
+						<input type="checkbox" name="Baking" value="Pure vanilla extract">Pure vanilla extract<br>
+					</td>
+					<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+						<input type="checkbox" name="Sweetener" value="Granulated sugar">Granulated sugar<br>
+						<input type="checkbox" name="Sweetener" value="Confectioners' sugar">Confectioners' sugar<br>
+						<input type="checkbox" name="Sweetener" value="Brown sugar">Brown sugar<br>
+						<input type="checkbox" name="Sweetener" value="Maple syrup">Maple syrup<br>
+						<input type="checkbox" name="Sweetener" value="Honey">Honey<br>
+						<input type="checkbox" name="Sweetener" value="Agave syrup">Agave syrup<br>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Rice &amp; Grains</strong><br></td>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Canned Foods</strong></td>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Spices</strong></td>
+				</tr>
+				
+				<tr>
+				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+					<input type="checkbox" name="Rice and Grains" value="Long-grain white rice">Long-grain white rice<br>
+					<input type="checkbox" name="Rice and Grains" value="Brown rice">Brown rice<br>
+					<input type="checkbox" name="Rice and Grains" value="Grains: quinoa or couscous">Grains: quinoa or couscous<br>
+					<input type="checkbox" name="Rice and Grains" value="Pasta: standard or whole grain">Pasta: standard or whole grain<br>
+					<input type="checkbox" name="Rice and Grains" value="Polenta">Polenta<br>
+					<input type="checkbox" name="Rice and Grains" value="Breadcrumbs">Breadcrumbs<br>
+					<input type="checkbox" name="Rice and Grains" value="Tortillas">Tortillas<br>
+				</td>
+
+				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+					<input type="checkbox" name="Canned Foods" value="Chicken broth">Chicken broth<br>
+					<input type="checkbox" name="Canned Foods" value="Beans">Beans<br>
+					<input type="checkbox" name="Canned Foods" value="Vegetables">Vegetables<br>
+					<input type="checkbox" name="Canned Foods" value="Olives or capers">Olives or capers<br>
+					<input type="checkbox" name="Canned Foods" value="Chiles">Chiles<br>
+					<input type="checkbox" name="Canned Foods" value="Salsa">Salsa<br>
+					<input type="checkbox" name="Canned Foods" value="Tomatoes">Tomatoes<br>
+					<input type="checkbox" name="Canned Foods" value="Tomato paste">Tomato paste<br>
+					<input type="checkbox" name="Canned Foods" value="Roasted red peppers">Roasted red peppers<br>
+					<input type="checkbox" name="Canned Foods" value="Tuna">Tuna<br>
+					<input type="checkbox" name="Canned Foods" value="Anchovy fillets or paste">Anchovy fillets or paste<br>					
+				</td>
+				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+					<input type="checkbox" name="Dried Spices" value="Bay leaves">Bay leaves<br>
+					<input type="checkbox" name="Dried Spices" value="Cajun seasoning">Cajun seasoning<br>
+					<input type="checkbox" name="Dried Spices" value="Cayenne pepper">Cayenne pepper<br>
+					<input type="checkbox" name="Dried Spices" value="Chili powder">Chili powder<br>
+					<input type="checkbox" name="Dried Spices" value="Crushed red pepper">Crushed red pepper<br>
+					<input type="checkbox" name="Dried Spices" value="Curry powder">Curry powder<br>
+					<input type="checkbox" name="Dried Spices" value="Fennel or dill seed">Fennel or dill seed<br>
+					<input type="checkbox" name="Dried Spices" value="Granulated garlic">Granulated garlic<br>
+					<input type="checkbox" name="Dried Spices" value="Ground cinnamon">Ground cinnamon<br>
+					<input type="checkbox" name="Dried Spices" value="Ground cloves">Ground cloves<br>
+					<input type="checkbox" name="Dried Spices" value="Ground cumin">Ground cumin<br>
+					<input type="checkbox" name="Dried Spices" value="Ground ginger">Ground ginger<br>
+					<input type="checkbox" name="Dried Spices" value="Oregano">Oregano<br>
+					<input type="checkbox" name="Dried Spices" value="Paprika">Paprika<br>
+					<input type="checkbox" name="Dried Spices" value="Rosemary">Rosemary<br>
+					<input type="checkbox" name="Dried Spices" value="Sesame seeds">Sesame seeds<br>
+					<input type="checkbox" name="Dried Spices" value="Thyme">Thyme<br>
+					<input type="checkbox" name="Dried Spices" value="Whole nutmeg">Whole nutmeg<br>
+				</td>
+				</tr>
+				<tr>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Dairy &amp; Eggs</strong><br></td>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Fresh Produce</strong></td>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Condiments</strong></td>
+				</tr>
+				<tr>
+				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+					<input type="checkbox" name="Dairy and Eggs" value="Milk">Milk<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Plain yogurt">Plain yogurt<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Unsalted butter">Unsalted butter<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Cheddar or mozzarella">Cheddar or mozzarella<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Goat cheese">Goat cheese<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Parmesan">Parmesan<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Eggs">Eggs<br>
+				</td>
+				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+					<input type="checkbox" name="Fresh Produce" value="Avocados">Avocados<br>
+					<input type="checkbox" name="Fresh Produce" value="Carrots">Carrots<br>
+					<input type="checkbox" name="Fresh Produce" value="Celery">Celery<br>
+					<input type="checkbox" name="Fresh Produce" value="Tomatoes">Tomatoes<br>
+					<input type="checkbox" name="Fresh Produce" value="Broccoli">Broccoli<br>
+					<input type="checkbox" name="Fresh Produce" value="Bell peppers">Bell peppers<br>
+					<input type="checkbox" name="Fresh Produce" value="Leafy greens">Leafy greens<br>
+					<input type="checkbox" name="Fresh Produce" value="Lettuce">Lettuce<br>
+					<input type="checkbox" name="Fresh Produce" value="Flat-leaf parsley or cilantro">Flat-leaf parsley or cilantro<br>
+					<input type="checkbox" name="Fresh Produce" value="Thyme">Thyme<br>
+					<input type="checkbox" name="Fresh Produce" value="Scallions">Scallions<br>
+					<input type="checkbox" name="Fresh Produce" value="Gingerroot">Gingerroot<br>
+					<input type="checkbox" name="Fresh Produce" value="Potatoes">Potatoes<br>
+					<input type="checkbox" name="Fresh Produce" value="Onions">Onions<br>
+					<input type="checkbox" name="Fresh Produce" value="Garlic">Garlic<br>
+					<input type="checkbox" name="Fresh Produce" value="Lemons">Lemons<br>
+					<input type="checkbox" name="Fresh Produce" value="Limes">Limes<br>
+					<input type="checkbox" name="Fresh Produce" value="Apples">Apples<br>
+					<input type="checkbox" name="Fresh Produce" value="Bananas">Bananas<br>
+				</td>
+				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+					<input type="checkbox" name="Condiments" value="Jelly">Jelly<br>
+					<input type="checkbox" name="Condiments" value="Peanut Butter">Peanut Butter<br>
+					<input type="checkbox" name="Condiments" value="Ketchup">Ketchup<br>
+					<input type="checkbox" name="Condiments" value="Mayonnaise">Mayonnaise<br>
+					<input type="checkbox" name="Condiments" value="Mustard">Mustard<br>
+					<input type="checkbox" name="Condiments" value="Pickles">Pickles<br>
+					<input type="checkbox" name="Condiments" value="Hot sauce">Hot sauce<br>
+					<input type="checkbox" name="Condiments" value="Worcestershire sauce">Worcestershire sauce<br>
+					<input type="checkbox" name="Condiments" value="Soy sauce">Soy sauce<br>
+					<input type="checkbox" name="Condiments" value="Asian fish sauce">Asian fish sauce<br>
+					<input type="checkbox" name="Condiments" value="Toasted sesame oil">Toasted sesame oil<br>
+				</td>				
+				</tr>
+				<tr>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Frozen</strong><br></td>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;">
+					</td>
+					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;">
+					</td>
+				</tr>
+				<tr>
+				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+					<input type="checkbox" name="Frozen" value="Ground beef">Ground beef<br>
+					<input type="checkbox" name="Frozen" value="Boneless, skinless chicken breasts">Boneless, skinless chicken breasts<br>
+					<input type="checkbox" name="Frozen" value="Bacon">Bacon<br>
+					<input type="checkbox" name="Frozen" value="Bread">Bread<br>
+					<input type="checkbox" name="Frozen" value="Vegetables">Vegetables<br>
+					<input type="checkbox" name="Frozen" value="Fruit">Fruit<br>
+					<input type="checkbox" name="Frozen" value="Nuts">Nuts<br>
+					<input type="checkbox" name="Frozen" value="Dough: pizza, pie, or puff pastry">Dough: pizza, pie, or puff pastry<br>
+					<input type="checkbox" name="Frozen" value="Ice Cream">Ice Cream<br>
+					
+				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
+				
+				</td>
+				<td style="width:250px; border: none; vertical-align: top; text-align:left;">
+				<input type="submit" name="submit" value="Submit" />
+				</td>
+				</tr>
+			</form>
+		</table>
 			
 		</center>
-			
 	</div>
-	
-	<div id="page4" style="display:none;">
+
+	<div id="page3" style="display: none;">
+
 		<center>
-		<b>Looking to track your meals?  Need some suggestions on what to eat?<br>  
-		<font color="red">PantryMate is a small little program designed to offer you many features in regards to your meal plan.</font><br>
-		Here you can get meal and grocery suggestions based off of nutritional goals, and see your weekly and monthly progress from our charts and graphs.<br>
-		<font color="red">The PantryMate will also notify you when your food selections are low as well as offering up different recipies for your use.</font><br>
-			<br>
-			<br>
-		PantryMate is a work in progress that was created in the Summer of 2017 by four students at Point Park University.<br>
-		<font color="red">If you have any questions or concerns in regards to PantryMate, do not hesitate to contact us!</font></b><br>
-			<br>
+
+			<br> <br> <br> <a href="buffalochickenpeppers.html"
+				class="tooltip"> <img src="recipes/stuffedpeppers.jpg"
+				alt="Buffalo Chicken Stuffed Peppers" height="275" width="275"
+				border="2"> <span> <strong>Buffalo Chicken
+						Stuffed Peppers</strong>
+			</span>
+			</a> <a href="#" class="tooltip"> <img src="recipes/tacopeppers.jpg"
+				alt="Taco Stuffed Peppers" height="275" width="275" border="2">
+				<span> <strong>Taco Stuffed Peppers</strong>
+			</span>
+			</a> <a href="#" class="tooltip"> <img
+				src="recipes/cheesesteakpeppers.jpg"
+				alt="Cheesesteak Stuffed Peppers" height="275" width="275"
+				border="2"> <span> <strong>Cheesesteak Stuffed
+						Peppers</strong>
+			</span>
+			</a> <br> <a href="#" class="tooltip"> <img
+				src="recipes/chickenalfredo.jpg" alt="Chicken Zucchini Alfredo"
+				height="275" width="275" border="2"> <span> <strong>Chicken
+						Zucchini Alfredo</strong>
+			</span>
+			</a> <a href="#" class="tooltip"> <img
+				src="recipes/bbqchickenpizza.jpg" alt="Buffalo Chicken Crust Pizza"
+				height="275" width="275" border="2"> <span> <strong>Buffalo
+						Chicken Crust Pizza</strong>
+			</span>
+			</a> <a href="#" class="tooltip"> <img src="recipes/cauliflower.jpg"
+				alt="General Tso Cauliflower" height="275" width="275" border="2">
+				<span> <strong>General Tso Cauliflower</strong>
+			</span>
+			</a> <br> <a href="#" class="tooltip"> <img
+				src="recipes/ravioli.jpg" alt="Zucchini Ravioli" height="275"
+				width="275" border="2"> <span> <strong>Zucchini
+						Ravioli</strong>
+			</span>
+			</a> <a href="#" class="tooltip"> <img src="recipes/enchaladas.jpg"
+				alt="Zucchini Enchaladas" height="275" width="275" border="2">
+				<span> <strong>Zucchini Enchaladas</strong>
+			</span>
+			</a> <a href="#" class="tooltip"> <img
+				src="recipes/garlicparmasan.jpg" alt="Garlic Parmasan Salmon"
+				height="275" width="275" border="2"> <span> <strong>Garlic
+						Parmasan Salmon</strong>
+			</span>
+			</a>
+
+		</center>
+
+	</div>
+
+	<div id="page4" style="display: none;">
+		<center>
+			<b>Looking to track your meals? Need some suggestions on what to
+				eat?<br> <font color="red">PantryMate is a small little
+					program designed to offer you many features in regards to your meal
+					plan.</font><br> Here you can get meal and grocery suggestions based
+				off of nutritional goals, and see your weekly and monthly progress
+				from our charts and graphs.<br> <font color="red">The
+					PantryMate will also notify you when your food selections are low
+					as well as offering up different recipies for your use.</font><br> <br>
+				<br> PantryMate is a work in progress that was created in the
+				Summer of 2017 by four students at Point Park University.<br> <font
+				color="red">If you have any questions or concerns in regards
+					to PantryMate, do not hesitate to contact us!</font>
+			</b><br> <br>
 			<table border="5" width="50%" cellpadding="2" cellspacing="2">
 				<tr>
-					<td><center><b>Mohammad Al-Abbasi</b></center></td>
+					<td><center>
+							<b>Mohammad Al-Abbasi</b>
+						</center></td>
 					<td><center>*email*</center></td>
 				</tr>
 				<tr>
-					<td><center><b>Chris Hawkins</b></center></td>
+					<td><center>
+							<b>Chris Hawkins</b>
+						</center></td>
 					<td><center>cthawki@pointpark.edu</center></td>
 				</tr>
 				<tr>
-					<td><center><b>Brandon Fuhs</b></center></td>
-					<td><center>*email*</center></td>
+					<td><center>
+							<b>Brandon Fuhs</b>
+						</center></td>
+					<td><center>bmfuhs@pointpark.edu</center></td>
 				</tr>
 				<tr>
-					<td><center><b>Shaun Connelly</b></center></td>
+					<td><center>
+							<b>Shaun Connelly</b>
+						</center></td>
 					<td><center>*email*</center></td>
 				</tr>
 			</table>
-			
-			<br>
-			<br>
-		
+
+			<br> <br>
+
 		</center>
 	</div>
-		
+
 	<div id="days">
 		<a href="" id="yesterday"><img src="Images/backbtn.png" alt="back"></a>
 		<p id="date">Today's Date</p>
-		<a href="" id="tomorrow"><img src="Images/fwdbtn.png" alt="forward"></a>
+		<a href="" id="tomorrow"><img src="Images/fwdbtn.png"
+			alt="forward"></a>
 	</div>
-	
+
 </body>
 </html>
