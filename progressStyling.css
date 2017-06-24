@@ -1,23 +1,39 @@
 h1 {
 	text-align: center;
-	color: blue;
+	font-family: 'Lora', serif;
 }
 
-.container{
-	display: inline-block;
+div#barChart{
+	text-align: center;
+	display: block;
 	width: auto;
-	border: 3px solid black;
-
 }
 
 .bar {
 	background-color: red;
+	border: 3px solid green;
 	display: inline-block;
+	float: none;
 	height: 200px;
 	width: 40px;
-	margin: 20px;
+	margin: 50px;
 }
 
 #addItem, #removeItem {
 	display: inline-block;
+}
+
+div#weight {
+	border: 3px solid black;
+	border-radius: 150px;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	display: inline-block;
+}
+
+div#weight p{
+	vertical-align: middle;
+	display: inline-block;
+	margin: 0 auto;
 }
