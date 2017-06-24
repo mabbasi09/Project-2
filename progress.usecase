@@ -1,0 +1,9 @@
+Use Case: Change nutrient elements
+Actor(s): User
+Brief: 
+	User may add, edit and remove nutrient elements and amounts for progress tracking. User must enter the nutrient name, unit type, and amount into the form which will update the table and bar charts. If the nutrient already exists, it will increase the amount, otherwise it will be an addition to the existing amount.
+Preconditions: The "Progress" page is presented to the user for changing
+Post-conditions: Bar chart will update reflecting the new amount of nutrients.
+Basic Flow:	
+	1) User must enter nutrient name, unit type, and amount into form fields.
+	2) User must click "add nutrient" or "remove nutrient" buttons to complete task.
