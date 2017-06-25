@@ -59,7 +59,16 @@
 		}
 	};
 	
-		
+var all_checked = new Array();
+function add_checked(el) {
+	   all_checked.push(el.id);
+}
+var arrayLength = all_checked.length;
+function myFunction(){
+	for (var i = 0; i < arrayLength; i++) {
+	console.log(all_checked[i]);
+	}
+}	
 </script>
 
 <body>
@@ -79,10 +88,7 @@
 	<center>
 		<img src="logo/PantryMate.jpg">
 	</center>
-
-	<div id="page1" style="display: none;">
-	<center>
-		<table style="border: none;">
+			<table style="border: none;">
 			<form>
 				<tr>
 					<td style="width:250px; border: none; text-align:left; vertical-align: bottom;"><strong>Basics</strong><br></td>
@@ -91,37 +97,37 @@
 				</tr>
 				<tr>
 					<td style="text-align: left; width:250px; vertical-align: top; border: none;"><input type="checkbox"
-						name="Basics" value="Kosher Salt">Kosher Salt<br> <input
-						type="checkbox" name="Basics" value="Fine salt">Fine salt<br>
-						<input type="checkbox" name="Basics" value="Black peppercorns">Black
+						name="Basics" value="Kosher Salt" id="1" onclick="add_checked(this);">Kosher Salt<br> <input
+						type="checkbox" name="Basics" value="Fine salt"  id="2" onclick="add_checked(this);">Fine salt<br>
+						<input type="checkbox" name="Basics" value="Black peppercorns" id="3" onclick="add_checked(this);">Black
 						peppercorns<br> <input type="checkbox" name="Basics"
-						value="Extra virgin olive oil">Extra virgin olive oil<br>
-						<input type="checkbox" name="Basics" value="Vegetable oil">Vegetable
+						value="Extra virgin olive oil" id="4" onclick="add_checked(this);">Extra virgin olive oil<br>
+						<input type="checkbox" name="Basics" value="Vegetable oil"  id="5" onclick="add_checked(this);">Vegetable
 						oil<br> <input type="checkbox" name="Basics"
-						value="Apple cider vinegar">Apple cider vinegar<br> <input
-						type="checkbox" name="Basics" value="Red wine vinegar">Red
+						value="Apple cider vinegar" id="6" onclick="add_checked(this);">Apple cider vinegar<br> <input
+						type="checkbox" name="Basics" value="Red wine vinegar" id="7" onclick="add_checked(this);">Red
 						wine vinegar<br> <input type="checkbox" name="Basics"
-						value="Balsamic or sherry vinegar">Balsamic or sherry
+						value="Balsamic or sherry vinegar" id="8" onclick="add_checked(this);">Balsamic or sherry
 						vinegar<br> <input type="checkbox" name="Basics"
-						value="Rice vinegar (unseasoned)">Rice vinegar
+						value="Rice vinegar (unseasoned)" id="9" onclick="add_checked(this);">Rice vinegar
 						(unseasoned)<br></td>
 					<td style="text-align:left; width:250px; vertical-align: top; border: none;">
-						<input type="checkbox" name="Baking" value="Flour">Flour<br>
-						<input type="checkbox" name="Baking" value="Baking soda">Baking soda<br>
+						<input type="checkbox" name="Baking" value="Flour" id="10" onclick="add_checked(this);">Flour<br>
+						<input type="checkbox" name="Baking" value="Baking soda" id="11" onclick="add_checked(this);">Baking soda<br>
 						<input type="checkbox" name="Baking" value="Baking powder">Baking powder<br>
-						<input type="checkbox" name="Baking" value="Cream of tartar">Cream of tartar<br>
-						<input type="checkbox" name="Baking" value="Cocoa powder (unsweetened)">Cocoa powder (unsweetened)<br>
-						<input type="checkbox" name="Baking" value="Chocolate: chips or bar">Chocolate: chips or bar<br>
-						<input type="checkbox" name="Baking" value="Evaporated milk">Evaporated milk<br>
-						<input type="checkbox" name="Baking" value="Pure vanilla extract">Pure vanilla extract<br>
+						<input type="checkbox" name="Baking" value="Cream of tartar" id="12" onclick="add_checked(this);">Cream of tartar<br>
+						<input type="checkbox" name="Baking" value="Cocoa powder (unsweetened)" id="13" onclick="add_checked(this);">Cocoa powder (unsweetened)<br>
+						<input type="checkbox" name="Baking" value="Chocolate: chips or bar" id="14" onclick="add_checked(this);">Chocolate: chips or bar<br>
+						<input type="checkbox" name="Baking" value="Evaporated milk" id="15" onclick="add_checked(this);">Evaporated milk<br>
+						<input type="checkbox" name="Baking" value="Pure vanilla extract" id="16" onclick="add_checked(this);">Pure vanilla extract<br>
 					</td>
 					<td style="text-align:left; width:250px; vertical-align: top; border: none;">
-						<input type="checkbox" name="Sweetener" value="Granulated sugar">Granulated sugar<br>
-						<input type="checkbox" name="Sweetener" value="Confectioners' sugar">Confectioners' sugar<br>
-						<input type="checkbox" name="Sweetener" value="Brown sugar">Brown sugar<br>
-						<input type="checkbox" name="Sweetener" value="Maple syrup">Maple syrup<br>
-						<input type="checkbox" name="Sweetener" value="Honey">Honey<br>
-						<input type="checkbox" name="Sweetener" value="Agave syrup">Agave syrup<br>
+						<input type="checkbox" name="Sweetener" value="Granulated sugar" id="17" onclick="add_checked(this);">Granulated sugar<br>
+						<input type="checkbox" name="Sweetener" value="Confectioners' sugar" id="18" onclick="add_checked(this);">Confectioners' sugar<br>
+						<input type="checkbox" name="Sweetener" value="Brown sugar" id="19" onclick="add_checked(this);">Brown sugar<br>
+						<input type="checkbox" name="Sweetener" value="Maple syrup" id="20" onclick="add_checked(this);">Maple syrup<br>
+						<input type="checkbox" name="Sweetener" value="Honey" id="21" onclick="add_checked(this);">Honey<br>
+						<input type="checkbox" name="Sweetener" value="Agave syrup" id="22" onclick="add_checked(this);">Agave syrup<br>
 					</td>
 				</tr>
 				
@@ -133,47 +139,47 @@
 				
 				<tr>
 				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
-					<input type="checkbox" name="Rice and Grains" value="Long-grain white rice">Long-grain white rice<br>
-					<input type="checkbox" name="Rice and Grains" value="Brown rice">Brown rice<br>
-					<input type="checkbox" name="Rice and Grains" value="Grains: quinoa or couscous">Grains: quinoa or couscous<br>
-					<input type="checkbox" name="Rice and Grains" value="Pasta: standard or whole grain">Pasta: standard or whole grain<br>
-					<input type="checkbox" name="Rice and Grains" value="Polenta">Polenta<br>
-					<input type="checkbox" name="Rice and Grains" value="Breadcrumbs">Breadcrumbs<br>
-					<input type="checkbox" name="Rice and Grains" value="Tortillas">Tortillas<br>
+					<input type="checkbox" name="Rice and Grains" value="Long-grain white rice" id="23" onclick="add_checked(this);">Long-grain white rice<br>
+					<input type="checkbox" name="Rice and Grains" value="Brown rice" id="24" onclick="add_checked(this);">Brown rice<br>
+					<input type="checkbox" name="Rice and Grains" value="Grains: quinoa or couscous" id="25" onclick="add_checked(this);">Grains: quinoa or couscous<br>
+					<input type="checkbox" name="Rice and Grains" value="Pasta: standard or whole grain" id="26" onclick="add_checked(this);">Pasta: standard or whole grain<br>
+					<input type="checkbox" name="Rice and Grains" value="Polenta" id="27" onclick="add_checked(this);">Polenta<br>
+					<input type="checkbox" name="Rice and Grains" value="Breadcrumbs" id="28" onclick="add_checked(this);">Breadcrumbs<br>
+					<input type="checkbox" name="Rice and Grains" value="Tortillas" id="29" onclick="add_checked(this);">Tortillas<br>
 				</td>
 
 				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
-					<input type="checkbox" name="Canned Foods" value="Chicken broth">Chicken broth<br>
-					<input type="checkbox" name="Canned Foods" value="Beans">Beans<br>
-					<input type="checkbox" name="Canned Foods" value="Vegetables">Vegetables<br>
-					<input type="checkbox" name="Canned Foods" value="Olives or capers">Olives or capers<br>
-					<input type="checkbox" name="Canned Foods" value="Chiles">Chiles<br>
-					<input type="checkbox" name="Canned Foods" value="Salsa">Salsa<br>
-					<input type="checkbox" name="Canned Foods" value="Tomatoes">Tomatoes<br>
-					<input type="checkbox" name="Canned Foods" value="Tomato paste">Tomato paste<br>
-					<input type="checkbox" name="Canned Foods" value="Roasted red peppers">Roasted red peppers<br>
-					<input type="checkbox" name="Canned Foods" value="Tuna">Tuna<br>
-					<input type="checkbox" name="Canned Foods" value="Anchovy fillets or paste">Anchovy fillets or paste<br>					
+					<input type="checkbox" name="Canned Foods" value="Chicken broth" id="30" onclick="add_checked(this);">Chicken broth<br>
+					<input type="checkbox" name="Canned Foods" value="Beans" id="31" onclick="add_checked(this);">Beans<br>
+					<input type="checkbox" name="Canned Foods" value="Vegetables" id="32" onclick="add_checked(this);">Vegetables<br>
+					<input type="checkbox" name="Canned Foods" value="Olives or capers" id="33" onclick="add_checked(this);">Olives or capers<br>
+					<input type="checkbox" name="Canned Foods" value="Chiles" id="34" onclick="add_checked(this);">Chiles<br>
+					<input type="checkbox" name="Canned Foods" value="Salsa" id="35" onclick="add_checked(this);">Salsa<br>
+					<input type="checkbox" name="Canned Foods" value="Tomatoes" id="36" onclick="add_checked(this);">Tomatoes<br>
+					<input type="checkbox" name="Canned Foods" value="Tomato paste" id="37" onclick="add_checked(this);">Tomato paste<br>
+					<input type="checkbox" name="Canned Foods" value="Roasted red peppers" id="38" onclick="add_checked(this);">Roasted red peppers<br>
+					<input type="checkbox" name="Canned Foods" value="Tuna" id="39" onclick="add_checked(this);">Tuna<br>
+					<input type="checkbox" name="Canned Foods" value="Anchovy fillets or paste" id="40" onclick="add_checked(this);">Anchovy fillets or paste<br>					
 				</td>
 				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
-					<input type="checkbox" name="Dried Spices" value="Bay leaves">Bay leaves<br>
-					<input type="checkbox" name="Dried Spices" value="Cajun seasoning">Cajun seasoning<br>
-					<input type="checkbox" name="Dried Spices" value="Cayenne pepper">Cayenne pepper<br>
-					<input type="checkbox" name="Dried Spices" value="Chili powder">Chili powder<br>
-					<input type="checkbox" name="Dried Spices" value="Crushed red pepper">Crushed red pepper<br>
-					<input type="checkbox" name="Dried Spices" value="Curry powder">Curry powder<br>
-					<input type="checkbox" name="Dried Spices" value="Fennel or dill seed">Fennel or dill seed<br>
-					<input type="checkbox" name="Dried Spices" value="Granulated garlic">Granulated garlic<br>
-					<input type="checkbox" name="Dried Spices" value="Ground cinnamon">Ground cinnamon<br>
-					<input type="checkbox" name="Dried Spices" value="Ground cloves">Ground cloves<br>
-					<input type="checkbox" name="Dried Spices" value="Ground cumin">Ground cumin<br>
-					<input type="checkbox" name="Dried Spices" value="Ground ginger">Ground ginger<br>
-					<input type="checkbox" name="Dried Spices" value="Oregano">Oregano<br>
-					<input type="checkbox" name="Dried Spices" value="Paprika">Paprika<br>
-					<input type="checkbox" name="Dried Spices" value="Rosemary">Rosemary<br>
-					<input type="checkbox" name="Dried Spices" value="Sesame seeds">Sesame seeds<br>
-					<input type="checkbox" name="Dried Spices" value="Thyme">Thyme<br>
-					<input type="checkbox" name="Dried Spices" value="Whole nutmeg">Whole nutmeg<br>
+					<input type="checkbox" name="Dried Spices" value="Bay leaves" id="41" onclick="add_checked(this);">Bay leaves<br>
+					<input type="checkbox" name="Dried Spices" value="Cajun seasoning" id="42" onclick="add_checked(this);">Cajun seasoning<br>
+					<input type="checkbox" name="Dried Spices" value="Cayenne pepper" id="43" onclick="add_checked(this);">Cayenne pepper<br>
+					<input type="checkbox" name="Dried Spices" value="Chili powder" id="44" onclick="add_checked(this);">Chili powder<br>
+					<input type="checkbox" name="Dried Spices" value="Crushed red pepper" id="45" onclick="add_checked(this);">Crushed red pepper<br>
+					<input type="checkbox" name="Dried Spices" value="Curry powder" id="46" onclick="add_checked(this);">Curry powder<br>
+					<input type="checkbox" name="Dried Spices" value="Fennel or dill seed" id="47" onclick="add_checked(this);">Fennel or dill seed<br>
+					<input type="checkbox" name="Dried Spices" value="Granulated garlic" id="48" onclick="add_checked(this);">Granulated garlic<br>
+					<input type="checkbox" name="Dried Spices" value="Ground cinnamon" id="49" onclick="add_checked(this);">Ground cinnamon<br>
+					<input type="checkbox" name="Dried Spices" value="Ground cloves" id="50" onclick="add_checked(this);">Ground cloves<br>
+					<input type="checkbox" name="Dried Spices" value="Ground cumin" id="51" onclick="add_checked(this);">Ground cumin<br>
+					<input type="checkbox" name="Dried Spices" value="Ground ginger" id="52" onclick="add_checked(this);">Ground ginger<br>
+					<input type="checkbox" name="Dried Spices" value="Oregano" id="53" onclick="add_checked(this);">Oregano<br>
+					<input type="checkbox" name="Dried Spices" value="Paprika" id="54" onclick="add_checked(this);">Paprika<br>
+					<input type="checkbox" name="Dried Spices" value="Rosemary" id="55" onclick="add_checked(this);">Rosemary<br>
+					<input type="checkbox" name="Dried Spices" value="Sesame seeds" id="56" onclick="add_checked(this);">Sesame seeds<br>
+					<input type="checkbox" name="Dried Spices" value="Thyme" id="57" onclick="add_checked(this);">Thyme<br>
+					<input type="checkbox" name="Dried Spices" value="Whole nutmeg" id="58" onclick="add_checked(this);">Whole nutmeg<br>
 				</td>
 				</tr>
 				<tr>
@@ -183,47 +189,47 @@
 				</tr>
 				<tr>
 				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
-					<input type="checkbox" name="Dairy and Eggs" value="Milk">Milk<br>
-					<input type="checkbox" name="Dairy and Eggs" value="Plain yogurt">Plain yogurt<br>
-					<input type="checkbox" name="Dairy and Eggs" value="Unsalted butter">Unsalted butter<br>
-					<input type="checkbox" name="Dairy and Eggs" value="Cheddar or mozzarella">Cheddar or mozzarella<br>
-					<input type="checkbox" name="Dairy and Eggs" value="Goat cheese">Goat cheese<br>
-					<input type="checkbox" name="Dairy and Eggs" value="Parmesan">Parmesan<br>
-					<input type="checkbox" name="Dairy and Eggs" value="Eggs">Eggs<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Milk" id="59" onclick="add_checked(this);">Milk<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Plain yogurt" id="60" onclick="add_checked(this);">Plain yogurt<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Unsalted butter" id="61" onclick="add_checked(this);">Unsalted butter<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Cheddar or mozzarella" id="62" onclick="add_checked(this);">Cheddar or mozzarella<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Goat cheese" id="63" onclick="add_checked(this);">Goat cheese<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Parmesan" id="64" onclick="add_checked(this);">Parmesan<br>
+					<input type="checkbox" name="Dairy and Eggs" value="Eggs" id="65" onclick="add_checked(this);">Eggs<br>
 				</td>
 				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
-					<input type="checkbox" name="Fresh Produce" value="Avocados">Avocados<br>
-					<input type="checkbox" name="Fresh Produce" value="Carrots">Carrots<br>
-					<input type="checkbox" name="Fresh Produce" value="Celery">Celery<br>
-					<input type="checkbox" name="Fresh Produce" value="Tomatoes">Tomatoes<br>
-					<input type="checkbox" name="Fresh Produce" value="Broccoli">Broccoli<br>
-					<input type="checkbox" name="Fresh Produce" value="Bell peppers">Bell peppers<br>
-					<input type="checkbox" name="Fresh Produce" value="Leafy greens">Leafy greens<br>
-					<input type="checkbox" name="Fresh Produce" value="Lettuce">Lettuce<br>
-					<input type="checkbox" name="Fresh Produce" value="Flat-leaf parsley or cilantro">Flat-leaf parsley or cilantro<br>
-					<input type="checkbox" name="Fresh Produce" value="Thyme">Thyme<br>
-					<input type="checkbox" name="Fresh Produce" value="Scallions">Scallions<br>
-					<input type="checkbox" name="Fresh Produce" value="Gingerroot">Gingerroot<br>
-					<input type="checkbox" name="Fresh Produce" value="Potatoes">Potatoes<br>
-					<input type="checkbox" name="Fresh Produce" value="Onions">Onions<br>
-					<input type="checkbox" name="Fresh Produce" value="Garlic">Garlic<br>
-					<input type="checkbox" name="Fresh Produce" value="Lemons">Lemons<br>
-					<input type="checkbox" name="Fresh Produce" value="Limes">Limes<br>
-					<input type="checkbox" name="Fresh Produce" value="Apples">Apples<br>
-					<input type="checkbox" name="Fresh Produce" value="Bananas">Bananas<br>
+					<input type="checkbox" name="Fresh Produce" value="Avocados" id="66" onclick="add_checked(this);">Avocados<br>
+					<input type="checkbox" name="Fresh Produce" value="Carrots" id="67" onclick="add_checked(this);">Carrots<br>
+					<input type="checkbox" name="Fresh Produce" value="Celery" id="68" onclick="add_checked(this);">Celery<br>
+					<input type="checkbox" name="Fresh Produce" value="Tomatoes" id="69" onclick="add_checked(this);">Tomatoes<br>
+					<input type="checkbox" name="Fresh Produce" value="Broccoli" id="70" onclick="add_checked(this);">Broccoli<br>
+					<input type="checkbox" name="Fresh Produce" value="Bell peppers" id="71" onclick="add_checked(this);">Bell peppers<br>
+					<input type="checkbox" name="Fresh Produce" value="Leafy greens" id="72" onclick="add_checked(this);">Leafy greens<br>
+					<input type="checkbox" name="Fresh Produce" value="Lettuce" id="73" onclick="add_checked(this);">Lettuce<br>
+					<input type="checkbox" name="Fresh Produce" value="Flat-leaf parsley or cilantro" id="74" onclick="add_checked(this);">Flat-leaf parsley or cilantro<br>
+					<input type="checkbox" name="Fresh Produce" value="Thyme" id="75" onclick="add_checked(this);">Thyme<br>
+					<input type="checkbox" name="Fresh Produce" value="Scallions" id="76" onclick="add_checked(this);">Scallions<br>
+					<input type="checkbox" name="Fresh Produce" value="Gingerroot" id="77" onclick="add_checked(this);">Gingerroot<br>
+					<input type="checkbox" name="Fresh Produce" value="Potatoes" id="78" onclick="add_checked(this);">Potatoes<br>
+					<input type="checkbox" name="Fresh Produce" value="Onions" id="79" onclick="add_checked(this);">Onions<br>
+					<input type="checkbox" name="Fresh Produce" value="Garlic" id="80" onclick="add_checked(this);">Garlic<br>
+					<input type="checkbox" name="Fresh Produce" value="Lemons" id="81" onclick="add_checked(this);">Lemons<br>
+					<input type="checkbox" name="Fresh Produce" value="Limes" id="82" onclick="add_checked(this);">Limes<br>
+					<input type="checkbox" name="Fresh Produce" value="Apples" id="83" onclick="add_checked(this);">Apples<br>
+					<input type="checkbox" name="Fresh Produce" value="Bananas" id="84" onclick="add_checked(this);">Bananas<br>
 				</td>
 				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
-					<input type="checkbox" name="Condiments" value="Jelly">Jelly<br>
-					<input type="checkbox" name="Condiments" value="Peanut Butter">Peanut Butter<br>
-					<input type="checkbox" name="Condiments" value="Ketchup">Ketchup<br>
-					<input type="checkbox" name="Condiments" value="Mayonnaise">Mayonnaise<br>
-					<input type="checkbox" name="Condiments" value="Mustard">Mustard<br>
-					<input type="checkbox" name="Condiments" value="Pickles">Pickles<br>
-					<input type="checkbox" name="Condiments" value="Hot sauce">Hot sauce<br>
-					<input type="checkbox" name="Condiments" value="Worcestershire sauce">Worcestershire sauce<br>
-					<input type="checkbox" name="Condiments" value="Soy sauce">Soy sauce<br>
-					<input type="checkbox" name="Condiments" value="Asian fish sauce">Asian fish sauce<br>
-					<input type="checkbox" name="Condiments" value="Toasted sesame oil">Toasted sesame oil<br>
+					<input type="checkbox" name="Condiments" value="Jelly" id="85" onclick="add_checked(this);">Jelly<br>
+					<input type="checkbox" name="Condiments" value="Peanut Butter" id="86" onclick="add_checked(this);">Peanut Butter<br>
+					<input type="checkbox" name="Condiments" value="Ketchup" id="87" onclick="add_checked(this);">Ketchup<br>
+					<input type="checkbox" name="Condiments" value="Mayonnaise" id="88" onclick="add_checked(this);">Mayonnaise<br>
+					<input type="checkbox" name="Condiments" value="Mustard" id="89" onclick="add_checked(this);">Mustard<br>
+					<input type="checkbox" name="Condiments" value="Pickles" id="90" onclick="add_checked(this);">Pickles<br>
+					<input type="checkbox" name="Condiments" value="Hot sauce" id="91" onclick="add_checked(this);">Hot sauce<br>
+					<input type="checkbox" name="Condiments" value="Worcestershire sauce" id="92" onclick="add_checked(this);">Worcestershire sauce<br>
+					<input type="checkbox" name="Condiments" value="Soy sauce" id="93" onclick="add_checked(this);">Soy sauce<br>
+					<input type="checkbox" name="Condiments" value="Asian fish sauce" id="94" onclick="add_checked(this);">Asian fish sauce<br>
+					<input type="checkbox" name="Condiments" value="Toasted sesame oil" id="95" onclick="add_checked(this);">Toasted sesame oil<br>
 				</td>				
 				</tr>
 				<tr>
@@ -235,27 +241,28 @@
 				</tr>
 				<tr>
 				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
-					<input type="checkbox" name="Frozen" value="Ground beef">Ground beef<br>
-					<input type="checkbox" name="Frozen" value="Boneless, skinless chicken breasts">Boneless, skinless chicken breasts<br>
-					<input type="checkbox" name="Frozen" value="Bacon">Bacon<br>
-					<input type="checkbox" name="Frozen" value="Bread">Bread<br>
-					<input type="checkbox" name="Frozen" value="Vegetables">Vegetables<br>
-					<input type="checkbox" name="Frozen" value="Fruit">Fruit<br>
-					<input type="checkbox" name="Frozen" value="Nuts">Nuts<br>
-					<input type="checkbox" name="Frozen" value="Dough: pizza, pie, or puff pastry">Dough: pizza, pie, or puff pastry<br>
-					<input type="checkbox" name="Frozen" value="Ice Cream">Ice Cream<br>
-					
+					<input type="checkbox" name="Frozen" value="Ground beef" id="96" onclick="add_checked(this);">Ground beef<br>
+					<input type="checkbox" name="Frozen" value="Boneless, skinless chicken breasts" id="97" onclick="add_checked(this);">Boneless, skinless chicken breasts<br>
+					<input type="checkbox" name="Frozen" value="Bacon" id="98" onclick="add_checked(this);">Bacon<br>
+					<input type="checkbox" name="Frozen" value="Bread" id="99" onclick="add_checked(this);">Bread<br>
+					<input type="checkbox" name="Frozen" value="Vegetables" id="100" onclick="add_checked(this);">Vegetables<br>
+					<input type="checkbox" name="Frozen" value="Fruit" id="101" onclick="add_checked(this);">Fruit<br>
+					<input type="checkbox" name="Frozen" value="Dough: pizza, pie, or puff pastry" id="102" onclick="add_checked(this);">Dough: pizza, pie, or puff pastry<br>
+					<input type="checkbox" name="Frozen" value="Ice Cream" id="103" onclick="add_checked(this);">Ice Cream<br>
+				</td>
 				<td style="text-align:left; width:250px; vertical-align: top; border: none;">
 				
 				</td>
 				<td style="width:250px; border: none; vertical-align: top; text-align:left;">
-				<input type="submit" name="submit" value="Submit" />
+				<button onclick = "myFuction()">Submit</button>
 				</td>
 				</tr>
 			</form>
 		</table>
-			
-		</center>
+		
+		<strong>Your Pantry</strong>
+		
+	</center>
 	</div>
 
 	<div id="page3" style="display: none;">
@@ -642,10 +649,10 @@
        
        <td width="50%">
        1.  Preheat oven to 375 degrees and grease a large baking dish with olive oil. <br>
-       2.  Make the Noodles: Slice two sides of each zucchini lengthwise to create two flat sides. Using a vegetable peeler, slice each zucchini into thin flat strips, peeling until you reach the center. These are your “noodles.” <br>
+       2.  Make the Noodles: Slice two sides of each zucchini lengthwise to create two flat sides. Using a vegetable peeler, slice each zucchini into thin flat strips, peeling until you reach the center. These are your â€œnoodles.â€� <br>
        3.  Make the Filling: In a medium bowl, combine ricotta, Parmesan, egg and 2 tablespoons basil and season with salt and pepper. <br>
-       4.  Assemble the Ravioli: Lay two strips of zucchini noodles so that they overlap lengthwise. Lay two more noodles on top, perpendicular to the first strips. You should end up with a “T” shape. Spoon about 1 tablespoon of filling in the center of the zucchini. Bring the ends of the strips together to fold over the center, working one side at a time. Turn the ravioli over and place in the baking dish seam-side down. Repeat with remaining zucchini and filling. Pour marinara around the zucchini and top ravioli with mozzarella.<br>
-       5.  Bake until zucchini noodles are “al dente” and the cheese is melted and starting to brown on top; 25 to 30 minutes.<br>
+       4.  Assemble the Ravioli: Lay two strips of zucchini noodles so that they overlap lengthwise. Lay two more noodles on top, perpendicular to the first strips. You should end up with a â€œTâ€� shape. Spoon about 1 tablespoon of filling in the center of the zucchini. Bring the ends of the strips together to fold over the center, working one side at a time. Turn the ravioli over and place in the baking dish seam-side down. Repeat with remaining zucchini and filling. Pour marinara around the zucchini and top ravioli with mozzarella.<br>
+       5.  Bake until zucchini noodles are â€œal denteâ€� and the cheese is melted and starting to brown on top; 25 to 30 minutes.<br>
        6.  Top with remaining basil and Parmesan and serve.</td>
     </tr>
  </table>
@@ -685,7 +692,7 @@
        Fresh cilantro leaves, for garnish </td>
        
        <td width="50%">
-       1.  Preheat oven to 350º. In large skillet over medium heat, heat oil. Add onion and season with salt. Cook until soft, 5 minutes, then add garlic, cumin, and chili powder and stir until combined. Add shredded chicken and 1 cup enchilada sauce and stir until saucy.<br>
+       1.  Preheat oven to 350Âº. In large skillet over medium heat, heat oil. Add onion and season with salt. Cook until soft, 5 minutes, then add garlic, cumin, and chili powder and stir until combined. Add shredded chicken and 1 cup enchilada sauce and stir until saucy.<br>
        2.  On a cutting board, use a Y-shaped vegetable peeler to make thin slices of zucchini. Lay out three, slightly overlapping, and place a spoonful of chicken mixture on top. Roll up and transfer to a baking dish. Repeat with remaining zucchini and chicken mixture.<br>
        3.  Spoon remaining 1/3 cup enchilada sauce over zucchini enchiladas and sprinkle with cheeses. <br>
        4.  Bake until melty, 20 minutes.<br>
@@ -722,7 +729,7 @@
        Freshly ground black pepper</td>
        
        <td width="50%">
-       1.  Preheat oven to 400º and spray a piece of aluminum foil with cooking spray. In a small bowl, mix together oil, parsley, Parmesan, and garlic and season with salt and pepper.<br>
+       1.  Preheat oven to 400Âº and spray a piece of aluminum foil with cooking spray. In a small bowl, mix together oil, parsley, Parmesan, and garlic and season with salt and pepper.<br>
        2.  Place salmon on foil on a large rimmed baking sheet and brush garlic mixture all over salmon. <br>
        3.  Cover with foil and bake until salmon is cooked through, 15 to 20 minutes.<br>
        4.  Sprinkle with more Parmesan and serve.</td>   
