@@ -4,7 +4,17 @@
 <link rel="stylesheet" href="project.style.css">
 </head>
 <title>PantryMate</title>
+<style>
+
+  #toggle {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+  }
+</style>
 <script type="text/javascript" src="JQ.js"></script>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
 	$(document).ready(function() {
 		//date buttons
@@ -58,17 +68,24 @@
 			$("#page13").show();
 		}
 	};
-	
+
+
 var all_checked = new Array();
 function add_checked(el) {
 	   all_checked.push(el.id);
 }
 var arrayLength = all_checked.length;
 function myFunction(){
+	
 	for (var i = 0; i < arrayLength; i++) {
 	console.log(all_checked[i]);
 	}
-}	
+}
+
+$( document ).click(function() {
+$( "#toggle" ).toggle( "highlight" );
+});
+	
 </script>
 
 <body>
@@ -88,6 +105,8 @@ function myFunction(){
 	<center>
 		<img src="logo/PantryMate.jpg">
 	</center>
+		<div id="page1" style="display: none;">
+			<center>
 			<table style="border: none;">
 			<form>
 				<tr>
@@ -254,7 +273,7 @@ function myFunction(){
 				
 				</td>
 				<td style="width:250px; border: none; vertical-align: top; text-align:left;">
-				<button onclick = "myFuction()">Submit</button>
+				<button onclick = "myFuction()" id="toggle">Submit</button>
 				</td>
 				</tr>
 			</form>
