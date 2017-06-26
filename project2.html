@@ -88,15 +88,6 @@ $( document ).click(function() {
 $( "#toggle" ).toggle( "highlight" );
 });
 		
-document.querySelector('form').onsubmit = function(e) {
-    e.preventDefault();
-    var name = document.querySelector('#recipe-name').value;
-    var description = document.querySelector('#recipe-description').value;
-    localStorage["name"] = name;
-    localStorage["description"] = description;
-    console.log(localStorage);
-    this.reset()
-  }
 
 </script>
 
