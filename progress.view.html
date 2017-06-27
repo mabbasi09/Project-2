@@ -1,8 +1,12 @@
 <html>
 	<head>
-		<script language="JavaScript" type="text/javascript" src="JQ.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="progress.model.js"></script>
 		<script>
+			//update nutrients via user input
 			$(function(){
 				$("#addItem").submit(function(){
 					var nutr = $("input#addNutr").val();
@@ -17,40 +21,41 @@
 					var amount = $("input#removeAmount").val();
 					progressModel.removeNutr(nutr, unit, amount);
 				});
+
+				$("#clear").on("click", function(){
+					progressModel.erase();
+				});
 			});
+
+			//update bar chart when amounts change
+
 		</script>
 		<title>My Progress</title>
 		<link rel="stylesheet" href="progressStyling.css">
 	</head>
 	<body>
-	<h1>Here's how you're doing!</h1>
-	<div class="container">
-		<div class="bar">
+	<h1>Progress</h1>
+	<div class="container-fluid">
+		<div class="center">
+			<div class="row-fluid" id="barChart">
+			</div>
+
+			<div class="row-fluid col-md-6 col-md-offset-4" id="edit">
+				<form action="#" id="addItem">
+					<input type="text" id="addNutr" placeholder="Protein, Calories etc."><br>
+					<input type="text" id="addUnit" placeholder="Grams, mg etc."><br>
+					<input type="text" id="addAmount" placeholder="7g, 100mg etc."><br>
+					<button class="btn btn-success" id="addBtn" type="submit" value="submit">Add Nutrient</button>
+				</form>
+				<form action="#" id="removeItem">
+					<input type="text" id="removeNutr" placeholder="Fats, Carbs etc."><br>
+					<input type="text" id="removeUnit" placeholder="Grams, mg etc."><br>
+					<input type="text" id="removeAmount" placeholder="5g, 80mg etc"><br>
+					<button class="btn btn-danger" id="removeBtn" type="submit" value="submit">Remove Nutrient</button>
+				</form>
+				<button class="btn btn-warning btn-rounded" id="clear">CLEAR ALL<br>NUTRIENTS</button>
+			</div>
 		</div>
-		Protein
-		<div class="bar">
-		</div>
-		Calories
-		<div class="bar">
-		</div>
-		Sugar
-		<div class="bar">
-		</div>
-		Cholestoral
-	</div>
-	<div>
-		<form action="#" id="addItem">
-			<input type="text" id="addNutr" placeholder="Protein, Calories etc."><br>
-			<input type="text" id="addUnit" placeholder="Grams, mg etc."><br>
-			<input type="text" id="addAmount" placeholder="7g, 100mg etc."><br>
-			<button id="addBtn" type="submit" value="submit">Add Nutrient</button>
-		</form>
-		<form action="#" id="removeItem">
-			<input type="text" id="removeNutr" placeholder="Fats, Carbs etc."><br>
-			<input type="text" id="removeUnit" placeholder="Grams, mg etc."><br>
-			<input type="text" id="removeAmount" placeholder="5g, 80mg etc"><br>
-			<button id="removeBtn" type="submit" value="submit">Remove Nutrient</button>
-		</form>
 	</div>
 	</body>
 </html>
