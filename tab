@@ -1,0 +1,27 @@
+
+<html>
+<head>
+<head?
+
+<div class=“tab-panels”>
+    <ul class=“tabs”>
+       <li  rel="panel1"class=“active”panel1</li>
+       <li> rel="panel2">panel2</li>
+       <li> rel="panel3"panel3</li>
+    </ul>
+
+    <div id="breakfast" class=“panel1 active”>
+       content1<br/>
+       content1<br/>
+       content1<br/>
+    </div>
+    <div id=“lunch” class=“panel”>
+        content2<br/>
+        content2<br/>
+        content2<br/>
+    </div>
+    <div id=dinner class=“panel”>
+        content3<br/>
+        content3<br/>
+        content3<br/>
+    </div>
