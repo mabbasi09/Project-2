@@ -1,22 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
 #navbar {
-	margin-left: 30%;
-}
-a {
-	text-decoration: none;
-}
-
-ul li {
-	font-size: 2em;
-	font-family: "Fredoka One", "sans-serif";
-	background-color: PaleGreen;
-	display: inline;
-	text-align: center;
+width:465px;
+margin:0 auto;
+padding:20px 0;
+background-color: white;
 }
 
-ul li:hover {
-	background-color: gray;
+ul#nav {
+font-family: Verdana;
+font-size:14px;
+list-style:none;
+margin:0 auto;
+padding:0;
+width:455px;
+overflow: auto;
+}
+
+ul#nav li {
+display:inline;
+}
+
+ul#nav li a {
+text-decoration:none;
+display: block;
+padding:5px 21px;
+background:#5F3222;
+color:#eee;
+float:left;
+text-align:center;
+border-top:2px solid #815444;
+border-right:2px solid #3d1000;
+border-bottom:2px solid #3d1000;
+border-left:2px solid #815444;
+}
+
+ul#nav li a:hover {
+background:#a37666;
+color:#000;
+border-top:2px solid #815444;
+border-right:2px solid #c59888;
+border-bottom:2px solid #c59888;
+border-left:2px solid #815444;
 }
 
 div#days {
@@ -33,12 +58,113 @@ div#days a {
 #date {
 	font-family: "Fredoka One", "sans-serif";
 	font-size: 1.5em;
-	color: PaleGreen;
+	color: red;
 	margin: auto;
 	margin-bottom: : 10px;
 	display: inline-block;
 }
 
 #tomorrow {
-	margin-left: 15px;
+	margin-left: 20px;
+}
+
+
+.image {
+   position: relative;
+   width: 100%;
+}
+
+
+a.tooltip {outline:none; }
+a.tooltip strong {line-height:30px;}
+a.tooltip:hover {text-decoration:none;}
+a.tooltip span {
+    z-index:10;display:none; padding:14px 20px;
+    margin-top:60px; margin-left:-160px;
+    width:300px; line-height:16px;
+}
+a.tooltip:hover span{
+    display:inline; position:absolute;
+    border:2px solid #FFF;  color:#EEE;
+    background:#333 url(http://www.menucool.com/tooltip/cssttp/css-tooltip-gradient-bg.png) repeat-x 0 0;
+}
+
+.callout {z-index:20;position:absolute;border:0;top:-14px;left:120px;}
+
+/*CSS3 extras*/
+a.tooltip span
+{
+    border-radius:2px;
+    box-shadow: 0px 0px 8px 4px #666;
+    /*opacity: 0.8;*/
+}
+
+
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+table {
+    table-layout : fixed;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
 }

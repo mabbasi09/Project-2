@@ -1,0 +1,31 @@
+<script> src=“bower_components/jquery/jquery.js”></script>
+
+<script>
+
+$(function() {
+
+  $(‘.tab-panels .tabs li’).on(click’, function()
+
+     var $panel = $(this.closest(‘.tab-panels’);
+     $panel.find(‘tabs li.active’).removeClass(‘active’);
+     $(this).addClass(‘active’);
+
+     // figure out which tab that needs to be shown
+     var panelToShow = $(this).attr(‘res’);
+
+     // hide the other tabs
+     $panel.find(‘.panel.active’).slideUp(300, showNextPanel);
+
+     //show next tab
+     function showNextPanel(){
+        $(this).removeClass(‘active’);
+
+        $(‘#’+panelToShow).slideDown(300, function() {
+           $(this).addClass(‘active’);
+        }};
+      }
+   }};
+
+}};
+
+</script>

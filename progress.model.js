@@ -42,7 +42,6 @@ var progressModel = (function(){
 		    	.attr("class", "label")
 		        .attr("x", function(d, i) {return (i * 80) + 550})
 		        .attr("y", function(d, i) {return 190 - (values[i] * 2)});
-
 	}
 
 	//add a selected nutrient and amount to users nutrients object
@@ -57,7 +56,6 @@ var progressModel = (function(){
 		}
 
 		drawChart(nutrients, unit);
-
 		console.log("You have added " + amount + " " + unit + " of " + nutr + "!.")
 		console.log(nutrients);
 	};
@@ -79,7 +77,6 @@ var progressModel = (function(){
 				console.log(nutrients);
 			}
 		}
-
 		else {
 			console.log("There are none of this nutrient");
 		}
@@ -89,6 +86,7 @@ var progressModel = (function(){
 	function erase(){
 		nutrients = {};
 		drawChart();
+
 	};
 
 	//user defined goal for nutrient and amount
