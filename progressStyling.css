@@ -10,17 +10,20 @@ div#barChart{
 }
 
 .bar {
-	background-color: red;
-	border: 3px solid green;
+	stroke: black;
+	stroke-width: 3;
 	display: inline-block;
 	float: none;
-	height: 200px;
-	width: 40px;
-	margin: 50px;
+	fill: red;
+}
+
+.bar:hover {
+	fill: green;
 }
 
 #addItem, #removeItem {
 	display: inline-block;
+	margin-top: 30px;
 }
 
 div#weight {
@@ -36,4 +39,10 @@ div#weight p{
 	vertical-align: middle;
 	display: inline-block;
 	margin: 0 auto;
+}
+
+.label {
+	fill: black;
+	font-family: 'Lora';
+	font-size: 16px;
 }
